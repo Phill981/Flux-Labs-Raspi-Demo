@@ -36,6 +36,5 @@ USER app
 # Expose port
 EXPOSE 8009
 
-
 # Run the application
 CMD ["./start.sh"]
