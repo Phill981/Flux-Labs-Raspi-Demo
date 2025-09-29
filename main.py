@@ -188,6 +188,9 @@ async def get_current_vitals():
         result.append(patient_response)
     
     return result
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
 @app.get("/vitals/previous", response_model=List[PatientResponse])
 async def get_previous_vitals():
