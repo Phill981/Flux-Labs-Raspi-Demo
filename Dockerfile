@@ -7,6 +7,7 @@ WORKDIR /app
 # 3. Copy only requirements first (for caching)
 COPY requirements.txt .
 
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
 # 4. Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
