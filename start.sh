@@ -19,7 +19,7 @@ echo "Data file size: $((FILE_SIZE / 1024 / 1024)) MB"
 echo "Starting FastAPI server..."
 exec uvicorn main:app \
     --host 0.0.0.0 \
-    --port 8000 \
+    --port 8009 \
     --workers 1 \
     --access-log \
     --log-level info
