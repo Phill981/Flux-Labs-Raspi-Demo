@@ -36,5 +36,9 @@ USER app
 # Expose port
 EXPOSE 8009
 
+# Minimal healthcheck for deployment platform compatibility
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=1 \
+    CMD curl -f http://localhost:8009/ || exit 1
+
 # Run the application
 CMD ["./start.sh"]
